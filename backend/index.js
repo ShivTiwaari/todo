@@ -50,7 +50,7 @@ async function handleCheck(id, username) {
 //////////////  MONGOOSE   ////////////////////////////////////////////////////////////////////////////////////////
 
 mongoose.connect(
-  "mongodb+srv://shivtiwari0701:easyasfuckbutwontopen@cluster0.imte2ax.mongodb.net/Collection_db"
+  "mongodb+srv://--------------------------database-url--------------------------"
 );
 
 const collectionSchema = new mongoose.Schema({
