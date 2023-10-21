@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.checkbox{
+    border-radius: 20px;
+    background-color: black;
+}
+
+.login-signup{
+    transform : translate(-50%, -50%);
+}
+
+.todo{
+    transform : translate(-50%, -50%);
+}
