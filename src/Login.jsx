@@ -28,7 +28,6 @@ export default function Login({
           data: { username, password },
         });
         if (data.message == "logged in") {
-          // toast("Logged in succesfully");
           localStorage.setItem("token", data.token);
           localStorage.setItem("user", username);
           setIsLoggedIn(true);

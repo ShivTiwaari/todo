@@ -7,7 +7,6 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
   const [arr, setArr] = useState([]);
   const [visible, setVisible] = useState("new");
   const getInitialData = async () => {
-    // let { data } = await axios.get("http://127.0.0.1:5000/");
     if (isLoggedIn) {
       let { data } = await axios({
         method: "get",
