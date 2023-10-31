@@ -108,6 +108,7 @@ function App() {
         onClick={menuToggle}
         className="bodyDiv w-screen h-screen dark:bg-gray-600 bg-[#AED2FF]"
       ></div>
+      {/* todo container starts */}
       <div className="fixed todo top-1/2 left-1/2 w-5/6 bg-[#F0F0F0] dark:bg-[#171717] lg:w-1/2 xl:w-4/12 shadow-2xl shadow-zinc-500 dark:shadow-zinc-900 container rounded-xl xl:h-3/4 lg:h-3/4 h-4/6  flex">
         {menuOpen && (
           <Menu
@@ -137,6 +138,7 @@ function App() {
           />
         </div>
       </div>
+      {/* todo container ends */}
       {document.documentElement.classList.contains("dark") ? (
         <ToastContainer theme="dark" autoClose={2500} position="top-center" />
       ) : (

@@ -24,10 +24,11 @@ export default function Login({
       try {
         let { data } = await axios({
           method: "post",
-          url: "http://127.0.0.1:5000/login",
+          url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/login",
           data: { username, password },
         });
         if (data.message == "logged in") {
+          // toast("Logged in succesfully");
           localStorage.setItem("token", data.token);
           localStorage.setItem("user", username);
           setIsLoggedIn(true);
@@ -84,7 +85,7 @@ export default function Login({
             <input
               type={view ? "text" : "password"}
               placeholder="password"
-              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[140%] mr-[33px] w-[100%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
+              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[131%] ml-[3%] w-[94%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

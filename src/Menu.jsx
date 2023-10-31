@@ -5,7 +5,7 @@ export default function Menu({ menuToggle, setDeleteAll, logout, isLoggedIn }) {
     if (isLoggedIn) {
       await axios({
         method: "delete",
-        url: `http://127.0.0.1:5000/all`,
+        url: `http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/all`,
         headers: {
           token: "Bearer " + localStorage.token,
         },

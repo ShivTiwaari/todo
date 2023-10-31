@@ -7,10 +7,11 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
   const [arr, setArr] = useState([]);
   const [visible, setVisible] = useState("new");
   const getInitialData = async () => {
+    // let { data } = await axios.get("http://127.0.0.1:5000/");
     if (isLoggedIn) {
       let { data } = await axios({
         method: "get",
-        url: "http://127.0.0.1:5000/",
+        url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/",
         headers: {
           token: `Bearer ${localStorage.token}`,
         },
@@ -73,7 +74,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
         txt &&
           (await axios({
             method: "post",
-            url: "http://127.0.0.1:5000",
+            url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000",
             data: { task: txt, id: randId, checked: false },
             headers: {
               token: "Bearer " + localStorage.token,
@@ -96,7 +97,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
     setArr([...temp]);
     axios({
       method: "put",
-      url: `http://127.0.0.1:5000/${id}`,
+      url: `http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/${id}`,
       headers: {
         token: "Bearer " + localStorage.token,
       },
@@ -108,7 +109,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
     setArr([...newTemp]);
     axios({
       method: "delete",
-      url: `http://127.0.0.1:5000/${id}`,
+      url: `http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/${id}`,
       headers: {
         token: "Bearer " + localStorage.token,
       },
