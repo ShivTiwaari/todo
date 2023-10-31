@@ -37,6 +37,7 @@ async function handleDelete(id, username) {
 }
 
 async function handleCheck(id, username) {
+  console.log("checked");
   let dbResponse = await Collection.find({ username });
   let taskArr = dbResponse[0].tasks;
   for (let i = 0; i < taskArr.length; i++) {
