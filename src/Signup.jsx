@@ -80,7 +80,7 @@ export default function Signup({
             <input
               type={view ? "text" : "password"}
               placeholder="password"
-              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[131%] ml-[3%] w-[94%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
+              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[151%] mr-5 w-[100%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
