@@ -60,7 +60,7 @@ export default function Login({
           <img
             onClick={() => setLoginVisible(false)}
             className="w-3 box-border mx-5 cursor-pointer"
-            src="../src/img/closeDark.png"
+            src="/closeDark.png"
             alt="X"
           />
         </div>
@@ -85,7 +85,7 @@ export default function Login({
             <input
               type={view ? "text" : "password"}
               placeholder="password"
-              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[151%] mr-5 w-[100%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
+              className="pl-3 h-12 rounded-lg lg:ml-0 lg:w-[139%] mr-5 w-[100%] border dark:border-zinc-300 border-zinc-900 bg-transparent dark:text-zinc-200 text-zinc-900 outline-none"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -94,11 +94,7 @@ export default function Login({
             <img
               onClick={() => setView((prev) => !prev)}
               className="w-5 h-5 opacity-80 cursor-pointer "
-              src={
-                !view
-                  ? `../src/img/hide4${mode}.png`
-                  : `../src/img/view4${mode}.png`
-              }
+              src={!view ? `/hide4${mode}.png` : `/view4${mode}.png`}
             />
           </div>
         </div>
@@ -111,7 +107,7 @@ export default function Login({
           </button>
           {loginLoader && (
             <div className="h-1/3 mt-4 ml-3 flex flex-col ">
-              <img className=" w-6" src={`../src/img/${mode}ModeLoader.gif`} />
+              <img className=" w-6" src={`/${mode}ModeLoader.gif`} />
             </div>
           )}
         </div>
