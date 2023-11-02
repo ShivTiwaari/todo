@@ -20,7 +20,7 @@ function Nav({
           >
             <img
               className="cursor-pointer z-10 lg:w-5 xl:w-5 w-4"
-              src="../src/img/ham.svg"
+              src="/ham.svg"
               alt="menu"
             />
           </div>
@@ -52,14 +52,14 @@ function Nav({
               <img
                 onClick={() => setMode("dark")}
                 className="cursor-pointer w-5 xl:w-7 lg:w-7 "
-                src="../src/img/dark.png"
+                src="/dark.png"
                 alt=""
               />
             ) : (
               <img
                 onClick={() => setMode("light")}
                 className="cursor-pointer w-5 xl:w-7 lg:w-7"
-                src="../src/img/light.svg"
+                src="/light.svg"
                 alt=""
               />
             )}

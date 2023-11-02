@@ -21,7 +21,7 @@ export default function Signup({
       setLoginLoader(true);
       let { data } = await axios({
         method: "post",
-        url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/signup",
+        url: "https://todo.shivtiwari.site/signup",
         data: { username, password },
       });
       if (data.message == "signed in") {
@@ -55,7 +55,7 @@ export default function Signup({
           <img
             onClick={() => setLoginVisible(false)}
             className="w-3 box-border mx-5 cursor-pointer"
-            src="../src/img/closeDark.png"
+            src="/closeDark.png"
             alt="X"
           />
         </div>
@@ -89,11 +89,7 @@ export default function Signup({
             <img
               onClick={() => setView((prev) => !prev)}
               className="w-5 h-5 opacity-80 cursor-pointer "
-              src={
-                !view
-                  ? `../src/img/hide4${mode}.png`
-                  : `../src/img/view4${mode}.png`
-              }
+              src={!view ? `/hide4${mode}.png` : `/view4${mode}.png`}
             />
           </div>
         </div>
@@ -106,7 +102,7 @@ export default function Signup({
           </button>
           {loginLoader && (
             <div className="h-1/3 mt-4 ml-3 flex flex-col ">
-              <img className=" w-6" src={`../src/img/${mode}ModeLoader.gif`} />
+              <img className=" w-6" src={`/${mode}ModeLoader.gif`} />
             </div>
           )}
         </div>

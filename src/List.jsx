@@ -11,7 +11,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
     if (isLoggedIn) {
       let { data } = await axios({
         method: "get",
-        url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/",
+        url: "https://todo.shivtiwari.site/",
         headers: {
           token: `Bearer ${localStorage.token}`,
         },
@@ -54,11 +54,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
       <img
         onClick={() => handleDelete(i.id)}
         className="w-5"
-        src={
-          mode == "dark"
-            ? "../src/img/deleteWhite.svg"
-            : "../src/img/deleteBlack.svg"
-        }
+        src={mode == "dark" ? "/deleteWhite.svg" : "/deleteBlack.svg"}
       />
     </li>
   ));
@@ -74,7 +70,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
         txt &&
           (await axios({
             method: "post",
-            url: "http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000",
+            url: "https://todo.shivtiwari.site",
             data: { task: txt, id: randId, checked: false },
             headers: {
               token: "Bearer " + localStorage.token,
@@ -97,7 +93,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
     setArr([...temp]);
     axios({
       method: "put",
-      url: `http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/${id}`,
+      url: `https://todo.shivtiwari.site/${id}`,
       headers: {
         token: "Bearer " + localStorage.token,
       },
@@ -109,7 +105,7 @@ export default function List({ mode, deleteAll, sendErrorToast, isLoggedIn }) {
     setArr([...newTemp]);
     axios({
       method: "delete",
-      url: `http://ec2-13-50-16-252.eu-north-1.compute.amazonaws.com:5000/${id}`,
+      url: `https://todo.shivtiwari.site/${id}`,
       headers: {
         token: "Bearer " + localStorage.token,
       },
